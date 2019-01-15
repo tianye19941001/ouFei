@@ -12,20 +12,20 @@
 </head>
 <body>
 	<header class="of-header">
-		<a class="logo" href=""><img src="images/logo.png" alt=""></a>
+		<a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
 		<ul>
-			<li><a href="">首页</a></li>
-			<li><a href="">产品</a></li>
-			<li><a href="">如何检测</a></li>
-			<li><a href="">了解基因</a></li>
-			<li><a href="">关于我们</a></li>
+			<li class="active"><a href="index.html">首页</a></li>
+			<li><a href="index.html#products">产品</a></li>
+			<li><a href="index.html#how">如何检测</a></li>
+			<li><a href="news.html">了解基因</a></li>
+			<li><a href="about.html">关于我们</a></li>
 		</ul>
-		<a class="fr login" href="">登录</a>
+		<a class="fr login" href="login.html">登录</a>
 	</header>
 	<div class="swiper-container-index">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-				<a href="">
+				<a href="news-detial.html">
 					<span class="text">
 						<h2>一切的改变·从欧飞开始</h2>
 						<p>拥有行业领先的基因组学、遗传学、大数据、人工智能研发和应用能力，专注基于基因检测，提供专业化定制健康服务。</p>
@@ -34,7 +34,7 @@
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a href="">
+				<a href="news-detial.html">
 					<span class="text">
 						<h2>一切的改变·从欧飞开始</h2>
 						<p>拥有行业领先的基因组学、遗传学、大数据、人工智能研发和应用能力。</p>
@@ -46,11 +46,11 @@
 		<div class="pagination"></div>
 	</div>
 	
-	<div class="of-product">
+	<div class="of-product" id="products">
 		<h2 class="of-title">AI智能基因检测</h2>
 		<ul class="of-pro-list">
 			<li>
-				<a href="">
+				<a href="detial.html">
 					<img src="images/pr_yy.png" alt="">
 					<h3>精准营养</h3>
 					<p>包含 基因身高、ABO 血型、酒精代谢能...</p>
@@ -59,7 +59,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<a href="detial.html">
 					<img src="images/pr_mf.png" alt="">
 					<h3>精准美肤</h3>
 					<p>包含 基因身高、ABO 血型、酒精代谢能...</p>
@@ -68,7 +68,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<a href="detial.html">
 					<img src="images/pr_sh.png" alt="">
 					<h3>优质生活</h3>
 					<p>包含 基因身高、ABO 血型、酒精代谢能...</p>
@@ -77,7 +77,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<a href="detial.html">
 					<img src="images/pr_ems.png" alt="">
 					<h3>EMS训练指导</h3>
 					<p>包含 基因身高、ABO 血型、酒精代谢能...</p>
@@ -124,7 +124,7 @@
 		</ul>
 	</div>
 
-	<div class="of-how">
+	<div class="of-how" id="how">
 		<h2 class="of-title">如何检测，只需要唾液即可</h2>
 		<p>唾液中的口腔上皮细胞含有 DNA，我们为你邮寄唾液采样盒，自行在家采集2mL 唾液，并原包装寄回检测中心即可。</p>
 		<img src="images/home_bg2.png" alt="">
@@ -185,8 +185,8 @@
 	</div>
 
 <script src="./js/jquery.min.js" type="text/javascript"></script>
-<script src="./js/swiper.min.js" type="text/javascript"></script>
 <script src="./js/xll.js" type="text/javascript"></script>
+<script src="./js/swiper.min.js" type="text/javascript"></script>
 <script>
 	var mySwiper = new Swiper('.swiper-container-index',{
 		autoplay: 3000,

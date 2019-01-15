@@ -23,8 +23,25 @@ $(document).ready(function(){
 		}
 	}
 
+	function setHeight() {
+		var conWidth = $(window).width() > 1440 ? $(window).width() : 1440;
+		var swiperHeight = conWidth / 1440 * 792;
+		$('.swiper-container-index').height(swiperHeight);
+	}
+
 	if (document.body.clientWidth>=768) {
 		// pc事件和方法
+		setHeight();
+		$(window).resize(function(){
+			setHeight();
+		})
+		$('.know i').click(function(){
+			$('.know-book').fadeIn();
+		})
+		
+		$('.know-book .close, .know-book .bac-bar').click(function(){
+			$('.know-book').fadeOut();
+		})
 		
 	}else{
 		// rem自动计算
