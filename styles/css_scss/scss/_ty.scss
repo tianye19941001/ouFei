@@ -202,6 +202,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 	margin: 0 auto;
 	height:1360-146px;
 	padding-top: 146px;
+	background: url('../../images/bac-2.png');
+	background-size: 100% auto;
 	ul{
 		margin-left: 150px;
 		padding-top: 140px;
@@ -672,13 +674,108 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 		li{
 			width:1254px;
 			height:70px;
+			line-height: 70px;
 			border-radius:3px;
+			font-size: 18px;
 			border:1px solid transparent;
+			position: relative;
+			cursor: pointer;
+			span{
+				display: inline-block;
+				width: 100px;
+				text-align: center;
+				font-weight:600;
+				color: #E35F58;
+				visibility: hidden;
+			}
+			p{
+				width: 1150px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				color: #2F3F54;
+			}
+			.check{
+				width:26px;
+				height:26px;
+				display: inline-block;
+				vertical-align: middle;
+				background:#fff;
+				border: 2px solid #2F3F54;
+				border-radius: 30px;
+				margin-right: 20px;
+			}
+			a{
+				position: absolute;
+				display: none;
+				right: 50px;
+				top: 0;
+				color:rgba(50,124,246,1);
+			}
 		}
 
 		.active{
 			background:rgba(227,95,88,0.1);
-			border-color: rgba(227,95,88,1)
+			border-color: rgba(227,95,88,1);
+			span{
+				visibility: visible;
+			}
+			a{
+				display: block;
+			}
+			p, em{
+				font-weight: 600; 
+			}
+			.check{
+				border-color: #E35F58;
+				position: relative;
+				&:after{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 10px;
+					height: 10px;
+					background-color: #E35F58;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+	.quan{
+		ul{
+			@extend .clearfix;
+			li{
+				float: left;
+				width:324px;
+				height:237px;
+				background-image: url(../../images/yhq.png);
+				background-size: 100% 100%;
+				cursor: pointer;
+			}
+			h4{
+				padding: 24px 30px 0;
+				font-size:40px;
+				font-weight:600;
+				color:rgba(227,95,88,1);
+				line-height:56px;
+				letter-spacing:1px;
+				margin-bottom: 10px;
+				word-break: break-all;
+			}
+			p{
+				padding: 0 30px;
+				font-size:20px;
+				color:rgba(47,63,84,1);
+				line-height:28px;
+				margin-bottom: 10px;
+			}
+			.on{
+				background-image: url(../../images/yhq-on.png);
+				h4{color: #fff;}
+				p{color: #fff;}
+			}
 		}
 	}
 	.buy-tit{
