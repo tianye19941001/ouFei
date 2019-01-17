@@ -42,6 +42,32 @@ $(document).ready(function(){
 		$('.know-book .close, .know-book .bac-bar').click(function(){
 			$('.know-book').fadeOut();
 		})
+
+		$('.product .add').click(function(){
+			changeNum(1)
+		})
+		$('.product .reduce').click(function(){
+			changeNum(-1)
+		})
+
+		$('.product .num input').on('keyup', function(e){
+			var nowVal = $(e.target).val();
+			if(!nowVal || nowVal == NaN) {
+				$('.product .num input').val(1);
+				return;
+			}
+			$('.product .num input').val(parseInt(nowVal));
+		})
+
+		$('.area li, .quan li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		})
+
+		function changeNum(num) {
+			var nowNum = parseInt($('.product .num input').val());
+			if (nowNum + num < 1) return;
+			$('.product .num input').val(nowNum + num);
+		}
 		
 	}else{
 		// rem自动计算
