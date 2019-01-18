@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="address=no">
-	<title>欧飞-我的订单</title>
+	<title>欧飞-退换货</title>
 	<link rel="stylesheet" type="text/css" href="./styles/css_scss/styles.css">
 </head>
 <body>
@@ -24,54 +24,50 @@
     <div class="of-my">
         <div class="my-left">
             <ul>
-                <li class="active"><a href=""><i></i>订单中心</a></li>
-                <li><a href=""><i></i>退换货</a></li>
+                <li><a href=""><i></i>订单中心</a></li>
+                <li class="active"><a href=""><i></i>退换货</a></li>
                 <li><a href=""><i></i>地址管理</a></li>
                 <li><a href=""><i></i>优惠券</a></li>
             </ul>
         </div>
         <div class="my-orders">
-            <h3 class="my-tit">我的订单</h3>
+            <h3 class="my-tit">地址管理 <a class="btn-blue" href="">新增收货地址</a></h3>
 
-            <div class="orders">
+            <div class="change">
                 <div class="my-tabs">
                     <ul>
-                        <li><a href="">全部订单</a></li>
-                        <li><a href="">待付款</a></li>
-                        <li><a href="">待收货</a></li>
-                        <li><a href="">已完成</a></li>
+                        <li><a href="">全部</a></li>
+                        <li><a href="">已申请</a></li>
+                        <li><a href="">已处理</a></li>
                     </ul>
                 </div>
-                <div class="orders-list">
-                    <ul>
-                        <li class="over">
-                            <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
-                            <div class="in">
-                                <img src="images/pic_news_2.png" alt="">
-                                <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
-                                <span>已完成</span>>
-                                <a class="btn-blue" href="">订单详情</a>
-                            </div>
-                        </li>
-                        <li class="paying">
-                            <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
-                            <div class="in">
-                                <img src="images/pic_news_2.png" alt="">
-                                <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
-                                <span>待付款</span>>
-                                <a class="btn-red" href="">立即付款</a>
-                            </div>
-                        </li>
-                        <li class="seding">
-                            <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
-                            <div class="in">
-                                <img src="images/pic_news_2.png" alt="">
-                                <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
-                                <span>待收货</span>>
-                                <a class="btn-blue" href="">订单详情</a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="location-list">
+                    <table>
+                        <th>
+                            <td>退换货编号</td>
+                            <td>订单号</td>
+                            <td>商品名称</td>
+                            <td>申请时间</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                        </th>
+                        <tr>
+                            <td>2313123</td>
+                            <td>55455214</td>
+                            <td>优质生活智能AI检测</td>
+                            <td>2018-12-13</td>
+                            <td>已申请</td>
+                            <td><a class="btn-blue" href="">查看详情</a></td>
+                        </tr>
+                        <tr>
+                            <td>2313123</td>
+                            <td>55455214</td>
+                            <td>优质生活智能AI检测</td>
+                            <td>2018-12-13</td>
+                            <td>已处理</td>
+                            <td><a class="btn-blue" href="">查看详情</a></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -80,12 +76,12 @@
     <div class="same-dialog">
         <div class="bar-bac"></div>
         <div class="in">
-            <h4>订单详情</h4>
+            <h4>退换货明细</h4>
             <div class="pay-detial">
                 <h5>付款信息</h5>
                 <p>付款时间：2018-12-13 16:23:12</p>
                 <p>商品总价：¥ 399</p>
-                <p>顺丰单号：E419485729385</p>
+                <p>顺丰单号：未寄出</p>
             </div>
             <div class="geter-detial">
                 <h5>收货人信息</h5>
@@ -94,43 +90,73 @@
                 <p>手机号：15111318086</p>
             </div>
             <div class="seding-detial">
-                <h5>物流信息</h5>
+                <h5>申请信息</h5>
                 <ul>
                     <li>
                         <div class="l"><i></i>2018-12-14/周五</div>
                         <div class="m"><span>12:32:02</span><span>07:47:46</span></div>
                         <div class="r">
-                            <p>您的订单已由本人签收</p>
-                            <p>您的专属配送员王玉飞，您的订单已到达上海中原营业部，配送小哥会尽快为您配送，请您留意，如需要更改配送时间或者未如期到达，均可给我打电话17621914266，很高兴为您服务！</p>
+                            <p>请退货，地址：北京海淀王庄路1号清华同方科技广场D座，欧飞基因，010-82366268 </p>
                         </div>
                     </li>
                     <li>
                         <div class="l"><i></i>2018-12-13/周四</div>
                         <div class="m"><span>12:32:02</span></div>
                         <div class="r">
-                            <p>您的订单已到达【上海中原营业部】</p>
+                            <p>商家已与您达成退货协议</p>
                         </div>
                     </li>
                     <li>
                         <div class="l"><i></i>2018-12-12/周三</div>
                         <div class="m"><span>12:32:02</span></div>
                         <div class="r">
-                            <p>商家已发货</p>
+                            <p>商家受理退货申请</p>
                         </div>
                     </li>
                 </ul>
             </div>
             <p class="controls">
-                <a class="btn-blue" href="">申请退换货</a>
+                <a class="btn-blue" href="">填写快递单号</a>
                 <a class="btn-blue" href="">关闭</a>
             </p>
         </div>
     </div>
     
+    <div class="same-dialog">
+        <div class="bar-bac"></div>
+        <div class="in">
+            <h4>填写物流单号</h4>
+            <div class="inp gs">
+                <p>物流公司</p>
+                <input type="text" placeholder="请填写物流公司">
+            </div>
+            <div class="inp gs-dh">
+                <p>物流单号</p>
+                <input type="text" placeholder="请填写物流单号">
+            </div>
+            <p class="controls">
+                <a class="btn-blue" href="">确定</a>
+                <a class="btn-blue" href="">关闭</a>
+            </p>
+        </div>
+    </div>
+
     <div class="of-footer">
         <h3>北京欧飞基因科技有限公司</h3>
         <p>电话：010-82366268 丨 邮箱： service@omicsfit.com 丨地址： 北京海淀王庄路1号清华同方科技广场D座 </p>
         <p>&#169; 2017 Copyrigts are Creative Commons</p>
+    </div>
+
+    <div class="same-dialog">
+        <div class="barbac"></div>
+        <div class="in">
+            <div class="tit">领取更多优惠券</div>
+            <i class="close"></i>
+            <i class="status ok-2"></i>
+            <!-- <i class="status fail"></i> -->
+            <p class="text">优惠码兑换成功！ <br />祝您购物娱乐</p>
+            <!-- <p class="text">优惠码兑换错误！ <br />请重新输入</p> -->
+        </div>
     </div>
     
 <script src="./js/jquery.min.js" type="text/javascript"></script>
