@@ -882,16 +882,6 @@ body {
         line-height: 70px;
         font-size: 20px;
         color: #2f3f54; }
-        .of-sign .of-form .label .quhao:after {
-          content: '';
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 12px;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 6px;
-          border-color: #2A4560 transparent transparent transparent; }
       .of-sign .of-form .label input {
         outline: none;
         font-size: 20px;

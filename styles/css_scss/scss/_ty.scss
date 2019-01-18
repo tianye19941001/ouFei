@@ -871,17 +871,6 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				line-height: 70px;
 				font-size:20px;
 				color:rgba(47,63,84,1);
-				&:after{
-					content: '';
-					display: inline-block;
-					vertical-align: middle;
-					margin-left: 12px;
-					width: 0;
-					height: 0;
-					border-style: solid;
-					border-width: 6px;
-					border-color: #2A4560 transparent transparent transparent;
-				}
 			}
 			input{
 				outline: none;
