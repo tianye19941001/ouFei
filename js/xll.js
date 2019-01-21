@@ -63,6 +63,24 @@ $(document).ready(function(){
 			$(this).addClass('active').siblings().removeClass('active');
 		})
 
+		// 关闭弹框
+		$('body').on('click', '.close-dialog' ,function(){
+			$(this).parents('.same-dialog').fadeOut();
+			return false;
+		})
+		// 订单查看详情
+		$('body').on('click', '.see-detial' ,function(){
+			$('.same-dialog').fadeIn();
+			return false;
+		})
+		// 提交退换货
+		$('.service-type .submit').click(function(){
+			$('.same-dialog').fadeIn();
+			return false;
+		})
+
+		
+
 		function changeNum(num) {
 			var nowNum = parseInt($('.product .num input').val());
 			if (nowNum + num < 1) return;

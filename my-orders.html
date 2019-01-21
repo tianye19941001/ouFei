@@ -22,65 +22,68 @@
 	</header>
 
     <div class="of-my">
-        <div class="my-left">
-            <ul>
-                <li class="active"><a href=""><i></i>订单中心</a></li>
-                <li><a href=""><i></i>退换货</a></li>
-                <li><a href=""><i></i>地址管理</a></li>
-                <li><a href=""><i></i>优惠券</a></li>
-            </ul>
-        </div>
-        <div class="my-orders">
-            <h3 class="my-tit">我的订单</h3>
+        <div class="my-in">
+            <div class="my-left">
+                <ul>
+                    <li class="active"><a href=""><i></i>订单中心</a></li>
+                    <li><a href=""><i></i>退换货</a></li>
+                    <li><a href=""><i></i>地址管理</a></li>
+                    <li><a href=""><i></i>优惠券</a></li>
+                </ul>
+            </div>
+            <div class="my-con my-orders">
+                <h3 class="my-tit">我的订单</h3>
 
-            <div class="orders">
-                <div class="my-tabs">
-                    <ul>
-                        <li><a href="">全部订单</a></li>
-                        <li><a href="">待付款</a></li>
-                        <li><a href="">待收货</a></li>
-                        <li><a href="">已完成</a></li>
-                    </ul>
-                </div>
-                <div class="orders-list">
-                    <ul>
-                        <li class="over">
-                            <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
-                            <div class="in">
-                                <img src="images/pic_news_2.png" alt="">
-                                <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
-                                <span>已完成</span>>
-                                <a class="btn-blue" href="">订单详情</a>
-                            </div>
-                        </li>
-                        <li class="paying">
-                            <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
-                            <div class="in">
-                                <img src="images/pic_news_2.png" alt="">
-                                <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
-                                <span>待付款</span>>
-                                <a class="btn-red" href="">立即付款</a>
-                            </div>
-                        </li>
-                        <li class="seding">
-                            <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
-                            <div class="in">
-                                <img src="images/pic_news_2.png" alt="">
-                                <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
-                                <span>待收货</span>>
-                                <a class="btn-blue" href="">订单详情</a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="orders">
+                    <div class="my-tabs">
+                        <ul>
+                            <li class="active"><a href="">全部订单</a></li>
+                            <li><a href="">待付款</a></li>
+                            <li><a href="">待收货</a></li>
+                            <li><a href="">已完成</a></li>
+                        </ul>
+                    </div>
+                    <div class="orders-list">
+                        <ul>
+                            <li class="over">
+                                <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
+                                <div class="in">
+                                    <img src="images/pic_news_2.png" alt="">
+                                    <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
+                                    <span>已完成</span>
+                                    <a class="see-detial btn-blue" href="">订单详情</a>
+                                </div>
+                            </li>
+                            <li class="paying">
+                                <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
+                                <div class="in">
+                                    <img src="images/pic_news_2.png" alt="">
+                                    <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
+                                    <span>待付款</span>
+                                    <a class="btn-red" href="">立即付款</a>
+                                </div>
+                            </li>
+                            <li class="seding">
+                                <h3><span>2018-12-16 12:23:23</span><span>订单号：2931239</span></h3>
+                                <div class="in">
+                                    <img src="images/pic_news_2.png" alt="">
+                                    <p>优质生活智能AI检测<br>x 1<br>¥ 399</p>
+                                    <span>待收货</span>
+                                    <a class="see-detial btn-blue" href="">订单详情</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="same-dialog">
+    <div class="same-dialog" style="display: none">
         <div class="bar-bac"></div>
         <div class="in">
             <h4>订单详情</h4>
+            <i class="close-dialog icon-close"></i>
             <div class="pay-detial">
                 <h5>付款信息</h5>
                 <p>付款时间：2018-12-13 16:23:12</p>
@@ -98,31 +101,31 @@
                 <ul>
                     <li>
                         <div class="l"><i></i>2018-12-14/周五</div>
-                        <div class="m"><span>12:32:02</span><span>07:47:46</span></div>
+                        <div class="m"><span>12:32:02</span><br><span>07:47:46</span></div>
                         <div class="r">
-                            <p>您的订单已由本人签收</p>
-                            <p>您的专属配送员王玉飞，您的订单已到达上海中原营业部，配送小哥会尽快为您配送，请您留意，如需要更改配送时间或者未如期到达，均可给我打电话17621914266，很高兴为您服务！</p>
+                            <span>您的订单已由本人签收</span><br>
+                            <span>您的专属配送员王玉飞，您的订单已到达上海中原营业部，配送小哥会尽快为您配送，请您留意，如需要更改配送时间或者未如期到达，均可给我打电话17621914266，很高兴为您服务！</span>
                         </div>
                     </li>
                     <li>
                         <div class="l"><i></i>2018-12-13/周四</div>
                         <div class="m"><span>12:32:02</span></div>
                         <div class="r">
-                            <p>您的订单已到达【上海中原营业部】</p>
+                            <sapn>您的订单已到达【上海中原营业部】</span>
                         </div>
                     </li>
                     <li>
                         <div class="l"><i></i>2018-12-12/周三</div>
                         <div class="m"><span>12:32:02</span></div>
                         <div class="r">
-                            <p>商家已发货</p>
+                            <span>商家已发货</span>
                         </div>
                     </li>
                 </ul>
             </div>
             <p class="controls">
                 <a class="btn-blue" href="">申请退换货</a>
-                <a class="btn-blue" href="">关闭</a>
+                <a class="btn-blue close-dialog" href="">关闭</a>
             </p>
         </div>
     </div>
