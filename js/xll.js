@@ -1,5 +1,43 @@
 
 $(document).ready(function(){
+	// 省市
+	var areas = [
+		{province: '北京', citys: ['东城区','西城区','房山区','丰台区','延庆县','密云县']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']},
+		{province: '河北省', citys: ['1','2','3','4','5','6']}
+	]
+	if ($('.province-select').length > 0) {
+		for (var i = areas.length - 1; i >= 0; i--) {
+			var li = $('<li></li>');
+			li.text(areas[i].province);
+			li.attr('data-citys', areas[i].citys.join(','));
+			$('.province-select ul').append(li);
+		}
+		$('body').on('click','.province-select ul li', function(){
+			$('.city-select ul li').remove();
+			$('.city-select>span').html('请选择');
+			var text = $(this).text();
+			var citys = $(this).data('citys').split(',');
+			$('.province-select>span').html(text);
+			for (var i = citys.length - 1; i >= 0; i--) {
+				var li = $('<li></li>');
+				li.text(citys[i]);
+				$('.city-select ul').append(li);
+			}
+		})
+		$('body').on('click','.city-select ul li', function(){
+			var text = $(this).text();
+			$('.city-select>span').html(text);
+		})
+	}
+
 	// 公共方法
 	var publicFuc = {
 		stophref: function(e){
@@ -111,6 +149,10 @@ $(document).ready(function(){
 			$('.add-tickets').fadeOut();
 			$('.dialog-alert').fadeIn();
 			return false;
+		})
+		// 编辑收货地址
+		$('.location-list .change').click(function(){
+			var tr = $(this).parents('tr');
 		})
 
 		

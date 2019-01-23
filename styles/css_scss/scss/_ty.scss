@@ -1388,14 +1388,80 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 		    overflow: auto;
 		}
 		li{
+			position: relative;
+			padding-left: 23px;
+			padding-bottom: 15px;
 			overflow: hidden;
-			margin-bottom: 15px;
 			&:last-child{margin-bottom: 0;}
+			&:before{
+				content: '';
+				width: 15px;
+				height: 20px;
+				display: block;
+				position: absolute;
+				background-color: #fff;
+				z-index: 3;
+				top: 7px;
+				left: 0;
+			}
+			&:after{
+				content: '';
+				width: 2px;
+				height: 100%;
+				display: block;
+				position: absolute;
+				background-color: #DDE3E8;
+				top: 7px;
+				left: 4px;
+			}
+			&:last-child:after{
+				display: none;
+			}
+			&:first-child{
+				.l{
+					&:before{
+						background:rgba(227,95,88,1);
+					}
+					&:after{
+						background:rgba(227,95,88,1);
+					}
+				}
+			}
 		}
 		.l,.r,.m{float: left;}
-		.l{width: 160px;}
+		.l{
+			width: 160px;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 9.5px;
+				width:10px;
+				height:10px;
+				background:rgba(227,95,88,1);
+				opacity:0.3;
+				background:rgba(172,178,186,1);
+				opacity:0.3;
+				z-index: 4;
+				border-radius: 10px;
+			}
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				left: 3px;
+				top: 12.5px;
+				width:4px;
+				height:4px;
+				z-index: 5;
+				border-radius: 4px;
+				background:rgba(172,178,186,1);
+			}
+		}
 		.m{width: 90px;}
-		.r{width: 620px;
+		.r{
+			width: 620px;
 			span{line-height: 21px;display: inline-table;}
 		}
 		p{line-height: 21px;}
@@ -1458,7 +1524,19 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 			background:rgba(255,255,255,1);
 			border-radius:3px;
 			border:1px solid rgba(221,227,232,1);
-
+			position: relative;
+			>span{
+				&:after{
+					content: '';
+					display: block;
+					position: absolute;
+					border-width: 10px;
+					border-color: rgba(120,137,149,1) transparent transparent;
+					border-style: solid;
+					top: 25px;
+					right: 20px;
+				}
+			}
 			&:last-child{
 				margin-left: 20px;
 			}
@@ -1466,6 +1544,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				ul{display: block;}
 			}
 			ul{
+				max-height: 160px;
+				overflow: auto;
 				display: none;
 				left: -1px;
 				top: 59px;
