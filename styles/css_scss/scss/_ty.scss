@@ -971,7 +971,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 			}
 			input{color:rgba(235,77,61,1);}
 		}
-		button{
+		.login,.signup{
 			display: block;
 			margin: 0 auto;
 			width:300px;
@@ -1123,6 +1123,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 	.my-con{
 		float: left;
 		width: 1100px;
+		margin-bottom: 60px;
 		table{
 			width: 100%;
 			font-size:16px;
