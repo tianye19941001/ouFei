@@ -78,6 +78,40 @@ $(document).ready(function(){
 			$('.same-dialog').fadeIn();
 			return false;
 		})
+		// 退换货详情
+		$('.change a').click(function(){
+			$('.change-detial').fadeIn();
+			return false;
+		})
+		$('.add-wl-btn').click(function(){
+			$('.add-wl').fadeIn();
+			return false;
+		})
+		$('.add-wl .submit').click(function(){
+			$('.add-wl, .change-detial').fadeOut();
+			$('.dialog-alert').fadeIn();
+			return false;
+		})
+		// 新增地址
+		$('#new-location').click(function(){
+			$('.add-location').fadeIn();
+			return false;
+		})
+		$('.add-location .submit').click(function(){
+			$('.add-location').fadeOut();
+			$('.dialog-alert').fadeIn();
+			return false;
+		})
+		// 新增优惠券
+		$('.new-ticket').click(function(){
+			$('.add-tickets').fadeIn();
+			return false;
+		})
+		$('.add-tickets .submit').click(function(){
+			$('.add-tickets').fadeOut();
+			$('.dialog-alert').fadeIn();
+			return false;
+		})
 
 		
 

@@ -18,74 +18,80 @@
 			<li><a href="news.html">了解基因</a></li>
 			<li><a href="about.html">关于我们</a></li>
 		</ul>
-		<a class="fr login" href="login.html">登录</a>
+		<a class="fr login" href="login.html">退出</a>
 	</header>
 
     <div class="of-my">
-        <div class="my-left">
-            <ul>
-                <li><a href=""><i></i>订单中心</a></li>
-                <li><a href=""><i></i>退换货</a></li>
-                <li><a href=""><i></i>地址管理</a></li>
-                <li class="active"><a href=""><i></i>优惠券</a></li>
-            </ul>
-        </div>
-        <div class="my-orders">
-            <h3 class="my-tit">优惠券 <a class="btn-blue" href="">领取更多优惠券</a></h3>
-
-            <div class="change">
-                <div class="my-tabs">
-                    <ul>
-                        <li><a href="">全部</a></li>
-                        <li><a href="">未使用</a></li>
-                        <li><a href="">已使用</a></li>
-                        <li><a href="">已失效</a></li>
-                    </ul>
-                </div>
-                <div class="tickets-list">
-                    <ul>
-                        <li class="grey">
-                            <h4>八折</h4>
-                            <p>2018.11.17-2018.12.19</p>
-                            <p>券编号 <span>47583387397</span></p>
-                        </li>
-                        <li>
-                            <h4>新人一元购</h4>
-                            <p>2018.11.17-2018.12.19</p>
-                            <p>券编号 <span>47583387397</span></p>
-                        </li>
-                        <li>
-                            <h4>满400减50</h4>
-                            <p>2018.11.17-2018.12.19</p>
-                            <p>券编号 <span>47583387397</span></p>
-                        </li>
-                        <li>
-                            <h4>满400减50</h4>
-                            <p>2018.11.17-2018.12.19</p>
-                            <p>券编号 <span>47583387397</span></p>
-                        </li>
-                        <li>
-                            <h4>满400减50</h4>
-                            <p>2018.11.17-2018.12.19</p>
-                            <p>券编号 <span>47583387397</span></p>
-                        </li>
-                    </ul>
+        <div class="my-in">
+            <div class="my-left">
+                <ul>
+                    <li><a href="my-orders.html"><i></i>订单中心</a></li>
+                    <li><a href="my-change.html"><i></i>退换货</a></li>
+                    <li><a href="my-location.html"><i></i>地址管理</a></li>
+                    <li class="active"><a href="my-tickets.html"><i></i>优惠券</a></li>
+                </ul>
+            </div>
+            <div class="my-con my-orders">
+                <h3 class="my-tit">优惠券 <a class="btn-blue new-ticket" href="">领取更多优惠券</a></h3>
+    
+                <div class="orders">
+                    <div class="my-tabs">
+                        <ul>
+                            <li class="active"><a href="">全部</a></li>
+                            <li><a href="">未使用</a></li>
+                            <li><a href="">已使用</a></li>
+                            <li><a href="">已失效</a></li>
+                        </ul>
+                    </div>
+                    <div class="tickets-list">
+                        <ul>
+                            <li>
+                                <h4>八折</h4>
+                                <p>2018.11.17-2018.12.19</p>
+                                <p>券编号 <span>47583387397</span></p>
+                                <a class="" href="">立即使用</a>
+                            </li>
+                            <li>
+                                <h4>新人一元购</h4>
+                                <p>2018.11.17-2018.12.19</p>
+                                <p>券编号 <span>47583387397</span></p>
+                                <a href="">立即使用</a>
+                            </li>
+                            <li>
+                                <h4>满400减50</h4>
+                                <p>2018.11.17-2018.12.19</p>
+                                <p>券编号 <span>47583387397</span></p>
+                                <a href="">立即使用</a>
+                            </li>
+                            <li class="grey">
+                                <h4>满400减50</h4>
+                                <p>2018.11.17-2018.12.19</p>
+                                <p>券编号 <span>47583387397</span></p>
+                            </li>
+                            <li class="grey">
+                                <h4>满400减50</h4>
+                                <p>2018.11.17-2018.12.19</p>
+                                <p>券编号 <span>47583387397</span></p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="same-dialog">
+    <div class="same-dialog add-tickets" style="display: none">
         <div class="bar-bac"></div>
         <div class="in">
             <h4>领取更多优惠券</h4>
-            <div class="inp gs">
+            <i class="icon-close close-dialog"></i>
+            <div class="inp ticket">
                 <p>优惠码</p>
-                <input class="w-all" type="text" placeholder="请填写优惠码">
+                <input class="inp-ticket" type="text" placeholder="请填写优惠码">
             </div>
             <p class="controls">
-                <a class="btn-blue" href="">确定</a>
-                <a class="btn-blue" href="">关闭</a>
+                <a class="btn-blue submit" href="">确定</a>
+                <a class="btn-blue close-dialog" href="">关闭</a>
             </p>
         </div>
     </div>
@@ -96,14 +102,15 @@
         <p>&#169; 2017 Copyrigts are Creative Commons</p>
     </div>
 
-    <div class="same-dialog">
-        <div class="barbac"></div>
-        <div class="in">
-            <div class="tit">操作成功</div>
-            <i class="close"></i>
-            <i class="status ok-2"></i>
-            <!-- <i class="status fail"></i> -->
-            <p class="text">物料单号已提交！<br/>请保持电话畅通，我们会尽快与您取得联系</p>
+    <div class="same-dialog dialog-alert" style="display: none">
+        <div class="bar-bac"></div>
+        <div class="in tc">
+            <h4 class="tit">操作成功</h4>
+            <i class="icon-close close-dialog"></i>
+            <!-- <i class="status ok"><img src="images/ic_right.png" alt=""></i> -->
+            <i class="status fail"><img src="images/ic_wrong.png" alt=""></i>
+            <!-- <p class="text">优惠码兑换成功！<br />祝您购物娱乐</p> -->
+            <p class="text">优惠码兑换错误！<br />请重新输入</p>
         </div>
     </div>
     
