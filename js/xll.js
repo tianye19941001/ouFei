@@ -77,7 +77,7 @@ $(document).ready(function(){
 			$('.know-book').fadeIn();
 		})
 		
-		$('.know-book .close, .know-book .bac-bar').click(function(){
+		$('.know-book .icon-close, .know-book .bac-bar').click(function(){
 			$('.know-book').fadeOut();
 		})
 
@@ -102,13 +102,18 @@ $(document).ready(function(){
 		})
 
 		// 关闭弹框
-		$('body').on('click', '.close-dialog' ,function(){
+		$('body').on('click', '.close-dialog,.bac-bar,.bar-bac' ,function(){
 			$(this).parents('.same-dialog').fadeOut();
 			return false;
 		})
 		// 订单查看详情
 		$('body').on('click', '.see-detial' ,function(){
 			$('.same-dialog').fadeIn();
+			return false;
+		})
+		// 退换货类型切换
+		$('body').on('click', '.service-type .types p' ,function(){
+			$(this).addClass('active').siblings().removeClass('active');
 			return false;
 		})
 		// 提交退换货
@@ -132,6 +137,12 @@ $(document).ready(function(){
 		})
 		// 新增地址
 		$('#new-location').click(function(){
+			$('.add-location .person input').val('');
+			$('.add-location .phone-number input').val('');
+			$('.add-location .detial-location').val('');
+			$('.add-location .province-select > span').text('请选择');
+			$('.add-location .city-select > span').text('请选择');
+
 			$('.add-location').fadeIn();
 			return false;
 		})
@@ -153,6 +164,20 @@ $(document).ready(function(){
 		// 编辑收货地址
 		$('.location-list .change').click(function(){
 			var tr = $(this).parents('tr');
+			var name = tr.find('td').eq(0).text();
+			var provide = tr.find('td').eq(1).find('span').eq(0).text();
+			var city = tr.find('td').eq(1).find('span').eq(1).text();
+			var detial = tr.find('td').eq(2).text();
+			var tel = tr.find('td').eq(4).text();
+
+			$('.add-location .person input').val(name);
+			$('.add-location .phone-number input').val(tel);
+			$('.add-location .detial-location').val(detial);
+			$('.add-location .province-select > span').text(provide);
+			$('.add-location .city-select > span').text(city);
+			
+			$('.add-location').fadeIn();
+			return false;
 		})
 
 		
