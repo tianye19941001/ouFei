@@ -1319,8 +1319,22 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 					cursor: pointer;
 					&:first-child{
 						margin-left: 0;
+						i{background-image: url(../../images/ic_th.png)}
 					}
-					img{
+					&.active:first-child{
+						i{background-image: url(../../images/ic_th_2.png)}
+					}
+					&:last-child{
+						i{background-image: url(../../images/ic_tk.png)}
+					}
+					&.active:last-child{
+						i{background-image: url(../../images/ic_tk_2.png)}
+					}
+					i{
+						display: inline-block;
+						width: 78px;
+						height: 78px;
+						background-size: 78px 78px;
 						vertical-align: middle;
 						margin: 0 30px;
 					}
@@ -1351,6 +1365,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				p{
 					width:500px;
 					height:60px;
+					overflow: hidden;
 					line-height: 60px;
 					color:rgba(47,63,84,.5);
 					background:rgba(255,255,255,1);
