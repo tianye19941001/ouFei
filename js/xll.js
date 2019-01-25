@@ -104,10 +104,12 @@ $(document).ready(function(){
 		// 关闭弹框
 		$('body').on('click', '.close-dialog,.bac-bar,.bar-bac' ,function(){
 			$(this).parents('.same-dialog').fadeOut();
+			$('body').removeClass('noscroll');
 			return false;
 		})
 		// 订单查看详情
 		$('body').on('click', '.see-detial' ,function(){
+			$('body').addClass('noscroll');
 			$('.same-dialog').fadeIn();
 			return false;
 		})
@@ -118,11 +120,13 @@ $(document).ready(function(){
 		})
 		// 提交退换货
 		$('.service-type .submit').click(function(){
+			$('body').addClass('noscroll');
 			$('.same-dialog').fadeIn();
 			return false;
 		})
 		// 退换货详情
 		$('.change a').click(function(){
+			$('body').addClass('noscroll');
 			$('.change-detial').fadeIn();
 			return false;
 		})
@@ -133,10 +137,15 @@ $(document).ready(function(){
 		$('.add-wl .submit').click(function(){
 			$('.add-wl, .change-detial').fadeOut();
 			$('.dialog-alert').fadeIn();
+			setTimeout(function(){
+				$('.dialog-alert').fadeOut();
+				$('body').removeClass('noscroll');
+			},3000)
 			return false;
 		})
 		// 新增地址
 		$('#new-location').click(function(){
+			$('body').addClass('noscroll');
 			$('.add-location .person input').val('');
 			$('.add-location .phone-number input').val('');
 			$('.add-location .detial-location').val('');
@@ -149,20 +158,30 @@ $(document).ready(function(){
 		$('.add-location .submit').click(function(){
 			$('.add-location').fadeOut();
 			$('.dialog-alert').fadeIn();
+			setTimeout(function(){
+				$('.dialog-alert').fadeOut();
+				$('body').removeClass('noscroll');
+			},3000)
 			return false;
 		})
 		// 新增优惠券
 		$('.new-ticket').click(function(){
+			$('body').addClass('noscroll');
 			$('.add-tickets').fadeIn();
 			return false;
 		})
 		$('.add-tickets .submit').click(function(){
 			$('.add-tickets').fadeOut();
 			$('.dialog-alert').fadeIn();
+			setTimeout(function(){
+				$('.dialog-alert').fadeOut();
+				$('body').removeClass('noscroll');
+			},3000)
 			return false;
 		})
 		// 编辑收货地址
 		$('.location-list .change').click(function(){
+			$('body').addClass('noscroll');
 			var tr = $(this).parents('tr');
 			var name = tr.find('td').eq(0).text();
 			var provide = tr.find('td').eq(1).find('span').eq(0).text();
