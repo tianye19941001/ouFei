@@ -428,6 +428,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 			&:nth-child(4n){
 				margin-right: 0;
 			}
+			img{display: block;width: 100%;height: 100%;}
 		}
 	}
 }
@@ -1095,13 +1096,6 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 		}
 	}
 }
-
-@media screen and (min-width:0px) and (max-width:768px){
-	body{ 
-		.demo{ width: rem(50); }
-	}
-}
-
 
 // 个人中心
 .of-my{

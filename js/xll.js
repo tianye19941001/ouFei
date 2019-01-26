@@ -67,7 +67,7 @@ $(document).ready(function(){
 		$('.swiper-container-index').height(swiperHeight);
 	}
 
-	if (document.body.clientWidth>=768) {
+	if (document.body.clientWidth > 1024) {
 		// pc事件和方法
 		setHeight();
 		$(window).resize(function(){
@@ -208,19 +208,17 @@ $(document).ready(function(){
 		}
 		
 	}else{
-		// rem自动计算
-        fnResize();
-        window.addEventListener("resize", function() {
-            fnResize()
-        }, false);
-
-        function fnResize(){
-            var docWidth = document.documentElement.clientWidth,
-                body = document.getElementsByTagName('html')[0];
-            body.style.fontSize = docWidth / 32 + 'px';
-        }
-
-        // 移动事件和方法
+		var footerText = $('.of-footer').find('p').eq(0).text().split('丨');
+		$('.of-footer').find('p').eq(0).html(footerText.join('<br>'));
+        // 移动购买事件
+        $('.of-detial-card a').click(function(){
+        	$('.of-mobile-buy').slideDown();
+        	return false;
+        })
+        $('.of-mobile-buy .icon-close').click(function(){
+        	$('.of-mobile-buy').slideUp();
+        	return false;
+        })
        
 	}
 });
