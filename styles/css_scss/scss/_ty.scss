@@ -1698,9 +1698,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 		}
 	}
 }
-.dialog-alert{
-	z-index: 10;
-}
+.dialog-alert{z-index: 10;}
 // 动画
 .an_toLeft {
     animation: toLeft 0.5s linear 0s;
@@ -1720,4 +1718,124 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 @keyframes toTop{
 	0%{ transform:translate3d(0px,100px,0); opacity: 0;filter: alpha(opacity= 0); }
 	100%{ transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+
+@media screen and (min-width:1025px) and (max-width:1439px){
+	body{min-width: 1152px}
+
+	.of-product{
+		.of-pro-list{
+			width: 1095px;
+		}
+	}
+	.of-goods{
+		width:1152px;
+		height:1360-146-300px;
+		background-repeat: no-repeat;
+		ul{
+			margin-left: 100px;
+		}
+	}
+	.of-how{
+		.of-how-list{
+			width: 280*4-30px;
+			li{
+				width: 250px;
+				height:340px;
+			}
+		}
+	}
+	// detial
+	.of-detial-card{
+		width: 1300-566-200px;
+	}
+	.of-detial-in{
+		.bannars{
+			img{
+				width: 1100px;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	}
+	.news-list{
+		width: 1340-280px;
+		li{
+			width:1340-280-80px;
+		}
+		.date{
+			em{
+				width: 520px;
+			}
+		}
+	}
+	.of-about{
+		width: 1100px;
+		.text{
+			width: 1100-140px;
+		}
+	}
+	.of-buy{
+		width: 1100px;
+		margin: 0 auto;
+		.of-title{
+			margin-bottom: 50px;
+		}
+		.product,.area, .quan{
+			width:1100-80px;
+		}
+		.product{
+			.in{
+				width: 1260-326-50-240px;
+			}
+		}
+		.area{
+			width:1100-80px;
+
+			li{
+				width:1014px;
+				p{
+					width: 1150-240px;
+				}
+			}
+		}
+
+		.order{
+			padding-right: 80px;
+			width:1338-500+50px;
+		}
+	}
+	.of-sign{
+		.of-form{
+			padding: 50px 0 40px;
+			bottom: 6%;
+		}
+	}
+	.know-book .in{ max-height: 500px }
+
+	.of-my{
+		.my-in{width: 1100px;}
+		.my-left{width: 150px;}
+		.my-con{width:1100-150px}
+		.orders-list{
+			padding: 40px;
+			width: 1100-150-80px;
+			.in{
+				p{width: 220px;}
+				span{width: 100px;}
+			}
+		}
+	}
+
+	.tickets-list{
+		padding: 30px 0 50px 20px;
+		ul{
+			li{
+				width:290px;
+				height:237px;
+				transform: scale(0.8);
+			}
+		}
+	}
+
 }
