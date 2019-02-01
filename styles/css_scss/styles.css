@@ -158,6 +158,9 @@ input::-webkit-search-cancel-button {
 input[type=search]::-ms-clear, input[type=text]::-ms-clear {
   display: none; }
 
+body {
+  min-width: 1150px; }
+
 .noscroll {
   overflow: hidden; }
 
@@ -273,6 +276,8 @@ body {
       color: rgba(50, 50, 50, 0.5); }
       .of-header ul a:hover {
         color: #323232; }
+      .of-header ul a:active {
+        color: rgba(50, 50, 50, 0.5); }
     .of-header ul .active a {
       color: #323232; }
   .of-header .login {
@@ -351,7 +356,7 @@ body {
       margin-bottom: 95px; }
       .of-product .of-pro-list li img {
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         left: 0;
         top: 0;
         width: 100%;
@@ -362,12 +367,16 @@ body {
         padding: 38px 58px 0;
         font-size: 30px;
         line-height: 60px;
-        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 2; }
       .of-product .of-pro-list li p {
         padding: 0 58px;
         font-size: 20px;
         line-height: 50px;
-        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 2; }
       .of-product .of-pro-list li strong {
         padding-left: 58px;
         display: block;
@@ -375,7 +384,9 @@ body {
         font-weight: bold;
         line-height: 42px;
         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2; }
       .of-product .of-pro-list li button {
         margin-left: 58px;
         width: 150px;
@@ -384,7 +395,9 @@ body {
         box-shadow: 0px 30px 50px 0px rgba(49, 157, 149, 0.5);
         border-radius: 25px;
         font-size: 20px;
-        border: 0; }
+        border: 0;
+        position: relative;
+        z-index: 2; }
       .of-product .of-pro-list li:nth-child(even) {
         margin-left: 95px; }
       .of-product .of-pro-list li:nth-child(1) button {
@@ -446,7 +459,7 @@ body {
 
 .of-how {
   text-align: center;
-  padding: 70px 0 190px; }
+  padding: 100px 0 190px; }
   .of-how > p {
     font-size: 20px;
     color: #2f3f54;
@@ -535,6 +548,7 @@ body {
   text-align: center;
   padding: 100px 0 90px;
   background: #e6effa;
+  position: relative;
   color: #2A4560; }
   .of-footer h3 {
     font-size: 20px;
@@ -544,6 +558,13 @@ body {
     line-height: 40px; }
     .of-footer p:last-child {
       opacity: 0.5; }
+  .of-footer .ewm {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    right: 6%; }
 
 .of-detial-card {
   width: 734px;
@@ -1890,6 +1911,10 @@ body {
       .of-header ul a {
         display: block;
         padding: 0 0.8rem; }
+        .of-header ul a:hover {
+          color: rgba(50, 50, 50, 0.5); }
+      .of-header ul li.active a {
+        color: #323232 !important; }
     .of-header .login {
       display: none; }
 
@@ -2064,8 +2089,11 @@ body {
     .of-footer p {
       font-size: 0.6666666667rem;
       line-height: 1.3333333333rem; }
-      .of-footer p:last-child {
-        margin-top: 2rem; }
+    .of-footer .ewm {
+      position: static;
+      width: 6.6666666667rem;
+      height: 6.6666666667rem;
+      margin: 1rem auto; }
 
   .of-mobile-buy {
     position: fixed;

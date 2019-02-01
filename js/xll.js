@@ -38,6 +38,28 @@ $(document).ready(function(){
 		})
 	}
 
+	$(window).scroll(function() {
+		if($('.of-product').length > 0) {
+			var listNT = parseInt(document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop);
+			var t1 = parseInt($('.swiper-wrapper').offset().top-100),
+				t2 = parseInt($('.of-product').offset().top-200),
+				t4 = parseInt($('.of-how').offset().top-200);
+				t4h = parseInt($('.of-how').height());
+			if ( t2 > listNT  && listNT > t1 ) {
+				$('.of-header ul li').eq(0).addClass('active').siblings().removeClass('active');
+			}else if( t4 > listNT  && listNT > t2 ){
+				$('.of-header ul li').eq(1).addClass('active').siblings().removeClass('active');
+			}
+			if( listNT >= (t4 + t4h) ){
+				$('.of-header ul li').eq(2).addClass('active').siblings().removeClass('active');
+			}
+		}
+	});
+	
+	$('.of-header ul li').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	})
+
 	// 公共方法
 	var publicFuc = {
 		stophref: function(e){
@@ -64,7 +86,7 @@ $(document).ready(function(){
 	function setHeight() {
 		var conWidth = $(window).width() > 1440 ? $(window).width() : 1440;
 		var swiperHeight = conWidth / 1440 * 792;
-		$('.swiper-container-index').height(swiperHeight);
+		$('.swiper-container-index, .swiper-container-index .swiper-wrapper, .swiper-container-index .swiper-slide').height(swiperHeight);
 	}
 
 	if (document.body.clientWidth > 1024) {
@@ -210,15 +232,14 @@ $(document).ready(function(){
 	}else{
 		var footerText = $('.of-footer').find('p').eq(0).text().split('丨');
 		$('.of-footer').find('p').eq(0).html(footerText.join('<br>'));
-        // 移动购买事件
-        $('.of-detial-card a').click(function(){
-        	$('.of-mobile-buy').slideDown();
-        	return false;
-        })
-        $('.of-mobile-buy .icon-close').click(function(){
-        	$('.of-mobile-buy').slideUp();
-        	return false;
-        })
-       
+		// 移动购买事件
+		$('.of-detial-card a').click(function(){
+			$('.of-mobile-buy').slideDown();
+			return false;
+		})
+		$('.of-mobile-buy .icon-close').click(function(){
+			$('.of-mobile-buy').slideUp();
+			return false;
+		})
 	}
 });

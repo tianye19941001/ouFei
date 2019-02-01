@@ -29,7 +29,14 @@
 				font-size: rem(20);
 				&:first-child{margin-left: rem(25);}
 			}
-			a{display: block; padding: 0 rem(24)}
+			a{display: block; padding: 0 rem(24);
+				&:hover{
+					color:rgba(50,50,50,.5);
+				}
+			}
+			li.active a{
+				color:rgba(50,50,50,1) !important;
+			}
 		}
 		.login{display: none;}
 	}
@@ -246,11 +253,13 @@
 		p{
 			font-size: rem(20);
 			line-height: rem(40);
-			&:last-child{
-				margin-top: rem(60);
-			}
 		}
-
+		.ewm{
+			position: static;
+			width: rem(200);
+			height: rem(200);
+			margin: rem(30) auto;
+		}
 	}
 	.of-mobile-buy{
 		position: fixed;

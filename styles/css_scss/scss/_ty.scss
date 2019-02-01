@@ -7,6 +7,7 @@ input::-webkit-search-cancel-button{
 input[type=search]::-ms-clear,input[type=text]::-ms-clear{
 	display: none;
 }
+body{min-width: 1150px;}
 .noscroll{overflow: hidden;}
 %ty_tr{ transition: all 0.3s; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; -o-transition: all 0.3s; }
 .mb38{margin-bottom: 38px !important;}
@@ -121,6 +122,9 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 			&:hover{
 				color:rgba(50,50,50,1);
 			}
+			&:active{
+				color:rgba(50,50,50,.5);
+			}
 		}
 		.active a {color:rgba(50,50,50,1);}
 	}
@@ -212,7 +216,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 			margin-bottom: 95px;
 			img{
 				position: absolute;
-				z-index: -1;
+				z-index: 1;
 				left: 0;
 				top: 0;
 				width: 100%;
@@ -225,12 +229,16 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				font-size: 30px;
 				line-height: 60px;
 				text-shadow:0px 1px 1px rgba(0,0,0,0.5);
+				position: relative;
+				z-index: 2;
 			}
 			p{
 				padding: 0 58px;
 				font-size: 20px;
 				line-height: 50px;
 				text-shadow:0px 1px 1px rgba(0,0,0,0.5);
+				position: relative;
+				z-index: 2;
 			}
 			strong{
 				padding-left: 58px;
@@ -240,6 +248,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				line-height:42px;
 				text-shadow:0px 1px 1px rgba(0,0,0,0.5);
 				margin-bottom: 20px;
+				position: relative;
+				z-index: 2;
 			}
 			button{
 				margin-left: 58px;
@@ -250,6 +260,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				border-radius:25px;
 				font-size:20px;
 				border: 0;
+				position: relative;
+				z-index: 2;
 			}
 			&:nth-child(even){
 				margin-left: 95px;
@@ -325,7 +337,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 
 .of-how{
 	text-align: center;
-	padding: 70px 0 190px;
+	padding: 100px 0 190px;
 	>p{
 		font-size:20px;
 		color:rgba(47,63,84,1);
@@ -437,6 +449,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 	text-align: center;
 	padding: 100px 0 90px;
 	background:rgba(230,239,250,1);
+	position: relative;
 	color: #2A4560;
 
 	h3{
@@ -450,7 +463,14 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 			opacity: 0.5;
 		}
 	}
-
+	.ewm{
+		position: absolute;
+		top: 50%;
+		width: 100px;
+		height: 100px;
+		margin-top: -50px;
+		right: 6%;
+	}
 }
 // detial
 .of-detial-card{
