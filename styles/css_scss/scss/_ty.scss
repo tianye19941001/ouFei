@@ -185,15 +185,25 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 		opacity: 0.5;
 		.swiper-pagination-switch{
 			display: inline-block;
-			margin: 12px;
-			width:10px;
-			height:10px;
-			background:rgba(255,255,255,1);
-			border-radius: 12px;
+			margin: 6px;
+			padding: 6px;
+			
+			cursor: pointer;
+			&:after{
+				content: '';
+				display: inline-block;
+				width:10px;
+				height:10px;
+				background:rgba(255,255,255,1);
+				border-radius: 12px;
+			}
 		}
 		.swiper-active-switch{
-			background:rgba(187,176,176,1);
-			border:1px solid rgba(255,255,255,1);
+			&:after{
+				background:rgba(187,176,176,1);
+				border:1px solid rgba(255,255,255,1);
+			}
+			
 		}
 	}
 }
@@ -262,6 +272,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 				border: 0;
 				position: relative;
 				z-index: 2;
+				outline: none;
 			}
 			&:nth-child(even){
 				margin-left: 95px;
@@ -534,7 +545,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff;}
 	.bannars{
 		padding-top: 88px;
 		img{
-			width:1300px;
+			width:900px;
 			margin: 0 auto;
 			display: block;
 		}
