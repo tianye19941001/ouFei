@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 	$(window).scroll(function() {
 		if($('.of-product').length > 0) {
+			if($('#liFore').hasClass('active') || $('#liFive').hasClass('active')) return;
 			var listNT = parseInt(document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop);
 			var t1 = parseInt($('.swiper-wrapper').offset().top-100),
 				t2 = parseInt($('.of-product').offset().top-200),

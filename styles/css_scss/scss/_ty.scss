@@ -69,7 +69,7 @@ body{min-width: 1150px;}
 		transform: rotate(-45deg);
 	}
 }
-body{ font-family:'Microsoft Yahei' !important; min-width: $minW; background-color: #fff;}
+body{ min-width: $minW; background-color: #fff;}
 // public
 .of-title{
 	text-align: center;
@@ -224,6 +224,8 @@ body{ font-family:'Microsoft Yahei' !important; min-width: $minW; background-col
 			position: relative;
 			border-radius: 4px;
 			margin-bottom: 95px;
+			.pc{display: block;}
+			.phone{display: none;}
 			img{
 				position: absolute;
 				z-index: 1;
@@ -277,19 +279,27 @@ body{ font-family:'Microsoft Yahei' !important; min-width: $minW; background-col
 			&:nth-child(even){
 				margin-left: 95px;
 			}
-			&:nth-child(1){
+			&.style-1{
 				button{color:rgba(254,139,77,1);box-shadow:0px 30px 50px 0px rgba(236,130,69,0.5);}
 				
 			}
-			&:nth-child(2){
+			&.style-2{
 				button{color:rgba(252,138,189,1);box-shadow:0px 30px 50px 0px rgba(253,101,178,0.5);}
 				
 			}
-			&:nth-child(3){
-				button{color:rgba(87,184,165,1);box-shadow:0px 30px 50px 0px rgba(49,157,149,0.5);}
+			&.style-3{
+				button{color:#6D2BFE;box-shadow:0px 30px 50px 0px rgba(182,76,254,0.5);}
+				
 			}
-			&:nth-child(4){
+			&.style-4{
+				button{color:#FD74B9;box-shadow:0px 30px 50px 0px rgba(255,122,189,0.5);}
+				
+			}
+			&.style-5{
 				button{color:rgba(106,71,254,1);box-shadow:0px 30px 50px 0px rgba(115,129,253,0.5);}
+			}
+			&.style-6{
+				button{color:rgba(87,184,165,1);box-shadow:0px 30px 50px 0px rgba(49,157,149,0.5);}
 			}
 		}
 	}
